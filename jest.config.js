@@ -10,7 +10,7 @@ export default {
       '<rootDir>/src/test/__mocks__/fileMock.ts',
   },
   setupFilesAfterEnv: ['<rootDir>/src/test/setup.ts'],
-  testMatch: ['**/__tests__/**/*.{ts,tsx}', '**/*.{spec,test}.{ts,tsx}'],
+  testMatch: ['**/*.{spec,test}.{ts,tsx}'],
   transform: {
     '^.+\\.tsx?$': [
       'ts-jest',
