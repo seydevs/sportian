@@ -1,0 +1,16 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# Redirigir llamadas a la API hacia el servidor real de EA para evitar CORS y 404
+[[redirects]]
+  from = "/api/ea/*"
+  to = "https://drop-api.ea.com/:splat"
+  status = 200
+  force = true
+
+# Redirigir todas las demás rutas al index.html para soportar SPA (React Router)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
